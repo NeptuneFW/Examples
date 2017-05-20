@@ -64,7 +64,7 @@
         
                 @foreach (\Libs\CSS\CSS::$colors as $color => $hex)
                 @if($color == 'brown')
-                    <?php exit(); ?>
+                    <?php break; ?>
                 @endif
                 <a style="text-decoration: none;" href="{{ $route->route('color')->param($color)->getRoute()  }}">
                     <li style="background: {{ $hex  }}" class="mdl-menu__item">
