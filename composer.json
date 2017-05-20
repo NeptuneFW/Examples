@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+            "System\\": "system",
+            "Libs\\": "libs",
+            "Triton\\": "triton",
+            "Database\\" : "database"
+        }
+    },
+    "require": {
+        "duncan3dc/blade": "^3.4"
+    }
+}
