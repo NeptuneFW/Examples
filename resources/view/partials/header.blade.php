@@ -46,7 +46,6 @@
                 for="select-language">
 
                 @foreach ($languages as $lang)
-
                 <a style="text-decoration: none;" href="{{ $route->route('lang')->param($lang['code'])->getRoute() }}">
                     <li class="mdl-menu__item">
                         <img style="width: 15px; height:15px;" src=" {{ $lang['icon_url'] }}"/> &nbsp;
@@ -62,8 +61,11 @@
 
             <ul style="max-height: 300px; overflow-y: scroll;" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                 for="select-color">
-
+        
                 @foreach (\Libs\CSS\CSS::$colors as $color => $hex)
+                @if($color == 'brown')
+                    <?php exit(); ?>
+                @endif
                 <a style="text-decoration: none;" href="{{ $route->route('color')->param($color)->getRoute()  }}">
                     <li style="background: {{ $hex  }}" class="mdl-menu__item">
                         {{ ucfirst($color) }}
